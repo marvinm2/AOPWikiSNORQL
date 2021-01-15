@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 SELECT  distinct  ?aop ?ke (group_concat(distinct ?speciesname;separator=" | ") as ?speciesnames) ?method
+=======
+SELECT  DISTINCT ?aop ?ke (group_concat(distinct ?speciesname;separator=" | ") as ?speciesnames) ?method
+>>>>>>> 433b29c6a7c53ad6891fe92b2c9c98ba560c2d36
 WHERE {
     ?aop a aopo:AdverseOutcomePathway ;
         rdfs:label ?aop_id;
