@@ -1,0 +1,4 @@
+SELECT ?AOP ?AOPTitle WHERE { 
+  ?AOP a aopo:AdverseOutcomePathway ; 
+  dc:title ?AOPTitle ;
+  aopo:has_adverse_outcome aop.events:1276.}
