@@ -1,0 +1,6 @@
+SELECT  distinct  ?keid ?ketitle ?id
+WHERE {
+    ?ke a aopo:KeyEvent; edam:data_1025 ?object; dc:title ?ketitle; rdfs:label ?keid.
+    ?object skos:exactMatch ?id.
+    ?id a edam:data_1027.
+} 
