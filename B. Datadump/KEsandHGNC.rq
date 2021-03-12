@@ -1,0 +1,5 @@
+SELECT  distinct  ?keid ?ketitle ?hgnc
+WHERE {
+    ?ke a aopo:KeyEvent; edam:data_1025 ?object; dc:title ?ketitle; rdfs:label ?keid.
+    ?object edam:data_2298 ?hgnc.
+} 
