@@ -9,8 +9,7 @@ WHERE{
       skos:exactMatch ?chemid .
    ?LinkedStressor dcterms:isPartOf ?LinkedAOPURI .
    ?LinkedAOPURI a aopo:AdverseOutcomePathway ; rdfs:label ?LinkedAOP.
-BIND(IRI(CONCAT("http://identifiers.org/chebi/", fn:substring(?chemid,31))) AS ?wpChEBI)
    SERVICE <http://sparql.wikipathways.org/sparql>{ 
-     ?metabolite wp:bdbChEBI ?wpChEBI ; dcterms:isPartOf ?PathwayURI.
+     ?metabolite wp:bdbChEBI ?chemid ; dcterms:isPartOf ?PathwayURI.
      ?PathwayURI a wp:Pathway ; dcterms:identifier ?PathwayID ; dc:title ?PathwayTitle ;
         wp:organismName "Homo sapiens"^^xsd:string .}}
