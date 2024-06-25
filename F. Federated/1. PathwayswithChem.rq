@@ -12,8 +12,8 @@ WHERE{
    ?LinkedStressor dcterms:isPartOf ?LinkedAOPURI .
    ?LinkedAOPURI a aopo:AdverseOutcomePathway ; rdfs:label ?LinkedAOP.
    ?mappedid a cheminf:000407; cheminf:000407 ?ChEBI.
-   SERVICE <http://sparql.wikipathways.org/sparql>{ 
+   SERVICE <https://sparql.wikipathways.org/sparql>{ 
      ?metabolite wp:bdbChEBI ?mappedid ; dcterms:isPartOf ?PathwayURI.
      ?PathwayURI a wp:Pathway ; dcterms:identifier ?PathwayID ; 
-                   dc:title ?PathwayTitle ; wp:organismName "Homo sapiens"^^xsd:string .}}
+                   dc:title ?PathwayTitle ; wp:organismName "Homo sapiens" .}}
 ORDER BY DESC (?ChemicalName)
