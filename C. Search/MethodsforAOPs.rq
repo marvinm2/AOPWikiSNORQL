@@ -8,4 +8,5 @@ WHERE {
     OPTIONAL {?ke mmo:0000000 ?method.}
 VALUES ?aop_id {"AOP 12" "AOP 57"}
 } 
+GROUP BY ?aop ?ke ?method
 ORDER BY ASC (?aop)
