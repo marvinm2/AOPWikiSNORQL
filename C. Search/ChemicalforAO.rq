@@ -9,4 +9,5 @@ SELECT ?AO ?AOname ?AOP (CONCAT('"',GROUP_CONCAT(?ChemicalName;SEPARATOR='","'),
   OPTIONAL {?Stressor aopo:has_chemical_entity ?Chemical. 
             ?Chemical dc:title ?ChemicalName.}
   FILTER regex (?AOname, "fibrosis", "i")}
+  GROUP BY ?AO ?AOname ?AOP
   ORDER BY DESC (?AO)
